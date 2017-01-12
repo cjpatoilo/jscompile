@@ -2,6 +2,7 @@
 
 > Compile, optimize and compress anything to JS.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c4dc1b68803c486285c0ecef5bf275b5)](https://www.codacy.com/app/cjpatoilo/jscompile?utm_source=github.com&utm_medium=referral&utm_content=cjpatoilo/jscompile&utm_campaign=badger)
 [![Travis Status](https://travis-ci.org/cjpatoilo/jscompile.svg?branch=master)](https://travis-ci.org/cjpatoilo/jscompile?branch=master)
 [![AppVeyor Status](https://ci.appveyor.com/api/projects/status/q2gmxde5tg31tc3r?svg=true)](https://ci.appveyor.com/project/cjpatoilo/jscompile)
 [![Codacy Status](https://img.shields.io/codacy/grade/c4dc1b68803c486285c0ecef5bf275b5/master.svg)](https://www.codacy.com/app/cjpatoilo/jscompile/dashboard)
