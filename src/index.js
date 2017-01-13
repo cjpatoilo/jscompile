@@ -3,6 +3,7 @@ const fs = require('fs')
 const path = require('path')
 const gulp = require('gulp')
 const babel = require('gulp-babel')
+const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 
 function error (value) {
@@ -43,6 +44,7 @@ function jscompile (input, output) {
 			gulp
 				.src(input)
 				.pipe(compile({ presets: ['latest'] }))
+				.pipe(concat('main.js'))
 				.pipe(uglify())
 				.pipe(gulp.dest(output))
 			console.info(`[info] Rendering Complete, saving .js file...`)
