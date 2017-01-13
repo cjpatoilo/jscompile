@@ -1,6 +1,6 @@
 {
 	"name": "jscompile",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Compile, optimize and compress anything to JS.",
 	"homepage": "https://github.com/cjpatoilo/jscompile",
 	"repository": "cjpatoilo/jscompile",
