@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict'
-const jscompile = require('../')
+const jscompile = require('./')
 const pkg = require('./package.json')
 const argv = process.argv.slice(2)
 
