@@ -1,6 +1,6 @@
 {
   "name": "jscompile",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Compile, optimize and compress anything to JS.",
   "homepage": "https://github.com/cjpatoilo/jscompile",
   "repository": "cjpatoilo/jscompile",
@@ -43,6 +43,7 @@
     "typescript"
   ],
   "dependencies": {
+    "@babel/core": "^7.11.0",
     "babel-preset-latest": "^6.16.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
