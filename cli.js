@@ -2,15 +2,17 @@
 'use strict'
 const jscompile = require('./')
 const pkg = require('./package.json')
-const argv = process.argv.slice(2)
 
-if (argv.indexOf('--version') !== -1 || argv.indexOf('-v') !== -1) {
-  console.log(pkg.version)
-  process.exit(0)
-}
+function cli (argv) {
+  const args = argv.slice(2)
 
-if (argv.indexOf('--help') !== -1 || argv.indexOf('-h') !== -1) {
-  console.log(`
+  if (args.indexOf('--version') !== -1 || args.indexOf('-v') !== -1) {
+    console.log(pkg.version)
+    process.exit(0)
+  }
+
+  if (args.indexOf('--help') !== -1 || args.indexOf('-h') !== -1) {
+    console.log(`
   Usage:
 
     $ jscompile <input> [<output>] [<options>]
@@ -25,7 +27,14 @@ if (argv.indexOf('--help') !== -1 || argv.indexOf('-h') !== -1) {
     $ jscompile src
     $ jscompile src dist
 `)
-  process.exit(0)
+    process.exit(0)
+  }
+
+  return jscompile(args[0], args[1])
 }
 
-jscompile(argv[0], argv[1])
+if (require.main === module) {
+  cli(process.argv)
+}
+
+module.exports = cli
