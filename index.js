@@ -33,17 +33,10 @@ function jscompile (input, output) {
 
   return new Promise((resolve, reject) => {
     try {
-      let compile
-      switch (path.parse(input).ext) {
-        case '.js':
-          compile = babel
-          break
-        default:
-          error('Input not supported.')
-      }
+      const compile = babel
       gulp
         .src(input)
-        .pipe(compile({ presets: ['latest'] }))
+        .pipe(compile({ presets: ['@babel/preset-env'] }))
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest(output))
@@ -56,4 +49,5 @@ function jscompile (input, output) {
   })
 }
 
+Object.assign(jscompile, { error, resolveInput, resolveOutput })
 module.exports = jscompile
